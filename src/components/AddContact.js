@@ -12,8 +12,9 @@ class AddContact extends React.Component {
                 alert("All the fields are mandatory");
                 return
             }
-            console.log(this.state);
-        }
+            this.props.addContactHandler(this.state);
+            this.setState({ name: "", email: "" });
+        };
         render() {
         return (
             <div className='ui main'>
@@ -36,4 +37,4 @@ class AddContact extends React.Component {
     }
 }
 
-export default AddContact;
+export default AddContact; 
